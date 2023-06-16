@@ -1,0 +1,72 @@
+package Seminar;
+
+public class main {
+    public static void main(String[] args) {
+        System.out.println("ОДНОСВЯЗНЫЙ СПИСОК");
+        SingleLinkedList list = new SingleLinkedList();
+        System.out.println("Добавление в начало списка:");
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.print();
+        System.out.println("Удаление из начала списка:");
+        list.removeFirst();
+        list.print();
+        System.out.println("Добавление в конец списка:");
+        list.addLast(15);
+        list.addLast(16);
+        list.print();
+        System.out.println("Удаление из конца списка:");
+        list.removeLast();
+        list.print();
+        System.out.println("Разворот односвязанного списка:");
+        list.revert();
+        list.print();
+        System.out.println("Проверка на наличие значения в списке:");
+        System.out.println("Содержится ли число 15 в списке: " + list.contains(15));
+        System.out.println("Содержится ли число 99 в списке: " + list.contains(99));
+        System.out.println("Очистка списка:");
+        list.clearList();
+        list.print();
+        System.out.println("Проверка исключений удаления:");
+        System.out.println("Удаление:");
+        list.removeLast();
+        list.removeFirst();
+        System.out.println("Разворот:");
+        list.revert();
+        System.out.println("-------------------\n");
+
+        System.out.println("ДВУСВЯЗНЫЙ СПИСОК");
+        DoublyLinkedList list2 = new DoublyLinkedList();
+        System.out.println("Добавление в начало списка:");
+        list2.addLast(1);
+        list2.addLast(2);
+        list2.addLast(3);
+        list2.print();
+        System.out.println("Удаление из начала списка:");
+        list2.delFirst();
+        list2.print();
+        System.out.println("Добавление в конец списка:");
+        list2.addLast(15);
+        list2.addLast(16);
+        list2.print();
+        System.out.println("Удаление из конца списка:");
+        list2.delLast();
+        list2.print();
+        System.out.println("Разворот двусвязного списка:");
+        list2.revert();
+        list2.print();
+        System.out.println("Проверка на наличие значения в списке:");
+        System.out.println("Содержится ли число 15 в списке: " + list2.contains(15));
+        System.out.println("Содержится ли число 99 в списке: " + list2.contains(99));
+        System.out.println("Очистка списка:");
+        list2.clearList();
+        list2.print();
+        System.out.println("Проверка исключений:");
+        System.out.println("Удаление:");
+        list2.delLast();
+        list2.delFirst();
+        System.out.println("Разворот:");
+        list2.revert();
+    }
+}
